@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>算法 on zhen&#39;s website</title>
+    <link>http://localhost:1313/categories/%E7%AE%97%E6%B3%95/</link>
+    <description>Recent content in 算法 on zhen&#39;s website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 28 Aug 2020 15:42:21 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>中缀表达式</title>
+      <link>http://localhost:1313/post/%E4%B8%AD%E7%BC%80%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+      <pubDate>Fri, 28 Aug 2020 15:42:21 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E4%B8%AD%E7%BC%80%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
+      <description>&lt;p&gt;&lt;em&gt;好难&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Trie</title>
+      <link>http://localhost:1313/post/trie/</link>
+      <pubDate>Fri, 28 Aug 2020 10:22:17 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/trie/</guid>
+      <description>&lt;p&gt;&lt;em&gt;好难&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>KMP</title>
+      <link>http://localhost:1313/post/kmp/</link>
+      <pubDate>Fri, 28 Aug 2020 10:22:08 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/kmp/</guid>
+      <description>&lt;p&gt;&lt;em&gt;好难&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SA</title>
+      <link>http://localhost:1313/post/sa/</link>
+      <pubDate>Fri, 28 Aug 2020 10:21:53 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/sa/</guid>
+      <description>&lt;p&gt;&lt;em&gt;好难&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

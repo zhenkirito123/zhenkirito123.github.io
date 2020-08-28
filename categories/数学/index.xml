@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数学 on zhen&#39;s website</title>
+    <link>http://localhost:1313/categories/%E6%95%B0%E5%AD%A6/</link>
+    <description>Recent content in 数学 on zhen&#39;s website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 28 Aug 2020 10:22:30 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>投影映射</title>
+      <link>http://localhost:1313/post/%E6%8A%95%E5%BD%B1%E6%98%A0%E5%B0%84/</link>
+      <pubDate>Fri, 28 Aug 2020 10:22:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E6%8A%95%E5%BD%B1%E6%98%A0%E5%B0%84/</guid>
+      <description>&lt;p&gt;&lt;em&gt;一些理解&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
