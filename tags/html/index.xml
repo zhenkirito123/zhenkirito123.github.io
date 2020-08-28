@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Html on zhen&#39;s website</title>
+    <link>http://localhost:1313/tags/html/</link>
+    <description>Recent content in Html on zhen&#39;s website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 27 Aug 2020 15:32:27 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Html 01 - 基础</title>
+      <link>http://localhost:1313/post/html-01/</link>
+      <pubDate>Thu, 27 Aug 2020 15:32:27 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/html-01/</guid>
+      <description>&lt;p&gt;&lt;em&gt;学了前端还是什么都不会的菜鸡&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Html 02 - 文字</title>
+      <link>http://localhost:1313/post/html-02/</link>
+      <pubDate>Thu, 27 Aug 2020 15:32:27 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/html-02/</guid>
+      <description>&lt;p&gt;&lt;em&gt;学了前端还是什么都不会的菜鸡&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Html 03 - 表格&amp;表单</title>
+      <link>http://localhost:1313/post/html-03./</link>
+      <pubDate>Thu, 27 Aug 2020 15:32:27 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/html-03./</guid>
+      <description>&lt;p&gt;&lt;em&gt;学了前端还是什么都不会的菜鸡&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
