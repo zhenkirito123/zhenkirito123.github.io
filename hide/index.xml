@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hides on zhen&#39;s website</title>
+    <link>http://localhost:1313/hide/</link>
+    <description>Recent content in Hides on zhen&#39;s website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 28 Aug 2020 15:42:21 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/hide/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>中缀表达式</title>
+      <link>http://localhost:1313/hide/%E4%B8%AD%E7%BC%80%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+      <pubDate>Fri, 28 Aug 2020 15:42:21 +0800</pubDate>
+      
+      <guid>http://localhost:1313/hide/%E4%B8%AD%E7%BC%80%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
+      <description>&lt;p&gt;&lt;em&gt;好难&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>投影映射</title>
+      <link>http://localhost:1313/hide/%E6%8A%95%E5%BD%B1%E6%98%A0%E5%B0%84/</link>
+      <pubDate>Fri, 28 Aug 2020 10:22:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/hide/%E6%8A%95%E5%BD%B1%E6%98%A0%E5%B0%84/</guid>
+      <description>&lt;p&gt;&lt;em&gt;一些理解&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>单调栈</title>
+      <link>http://localhost:1313/hide/%E5%8D%95%E8%B0%83%E6%A0%88/</link>
+      <pubDate>Fri, 28 Aug 2020 10:22:24 +0800</pubDate>
+      
+      <guid>http://localhost:1313/hide/%E5%8D%95%E8%B0%83%E6%A0%88/</guid>
+      <description>&lt;p&gt;&lt;em&gt;记录&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Trie</title>
+      <link>http://localhost:1313/hide/trie/</link>
+      <pubDate>Fri, 28 Aug 2020 10:22:17 +0800</pubDate>
+      
+      <guid>http://localhost:1313/hide/trie/</guid>
+      <description>&lt;p&gt;&lt;em&gt;好难&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>KMP</title>
+      <link>http://localhost:1313/hide/kmp/</link>
+      <pubDate>Fri, 28 Aug 2020 10:22:08 +0800</pubDate>
+      
+      <guid>http://localhost:1313/hide/kmp/</guid>
+      <description>&lt;p&gt;&lt;em&gt;好难&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>lea 命令</title>
+      <link>http://localhost:1313/hide/lea/</link>
+      <pubDate>Fri, 28 Aug 2020 10:22:01 +0800</pubDate>
+      
+      <guid>http://localhost:1313/hide/lea/</guid>
+      <description>&lt;p&gt;&lt;em&gt;一点思考&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SA</title>
+      <link>http://localhost:1313/hide/sa/</link>
+      <pubDate>Fri, 28 Aug 2020 10:21:53 +0800</pubDate>
+      
+      <guid>http://localhost:1313/hide/sa/</guid>
+      <description>&lt;p&gt;&lt;em&gt;好难&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ICS Lec. 02-03</title>
+      <link>http://localhost:1313/hide/ics-01/</link>
+      <pubDate>Fri, 28 Aug 2020 10:21:46 +0800</pubDate>
+      
+      <guid>http://localhost:1313/hide/ics-01/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Lecture 02-03 Bits, Bytes, and Integers&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Css 01 - 基础</title>
+      <link>http://localhost:1313/hide/css-01/</link>
+      <pubDate>Fri, 28 Aug 2020 10:21:38 +0800</pubDate>
+      
+      <guid>http://localhost:1313/hide/css-01/</guid>
+      <description>&lt;p&gt;&lt;em&gt;学了前端还是什么都不会的菜鸡&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>JavaScript 01 - 基础</title>
+      <link>http://localhost:1313/hide/javascript-01/</link>
+      <pubDate>Fri, 28 Aug 2020 10:21:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/hide/javascript-01/</guid>
+      <description>&lt;p&gt;&lt;em&gt;学了前端还是什么都不会的菜鸡&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LaTeX 02 - 数学</title>
+      <link>http://localhost:1313/hide/latex-02/</link>
+      <pubDate>Fri, 28 Aug 2020 10:18:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/hide/latex-02/</guid>
+      <description>&lt;p&gt;&lt;em&gt;记录&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Html 01 - 基础</title>
+      <link>http://localhost:1313/hide/html-01/</link>
+      <pubDate>Thu, 27 Aug 2020 15:32:27 +0800</pubDate>
+      
+      <guid>http://localhost:1313/hide/html-01/</guid>
+      <description>&lt;p&gt;&lt;em&gt;学了前端还是什么都不会的菜鸡&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Html 02 - 文字</title>
+      <link>http://localhost:1313/hide/html-02/</link>
+      <pubDate>Thu, 27 Aug 2020 15:32:27 +0800</pubDate>
+      
+      <guid>http://localhost:1313/hide/html-02/</guid>
+      <description>&lt;p&gt;&lt;em&gt;学了前端还是什么都不会的菜鸡&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Html 03 - 表格&amp;表单</title>
+      <link>http://localhost:1313/hide/html-03/</link>
+      <pubDate>Thu, 27 Aug 2020 15:32:27 +0800</pubDate>
+      
+      <guid>http://localhost:1313/hide/html-03/</guid>
+      <description>&lt;p&gt;&lt;em&gt;学了前端还是什么都不会的菜鸡&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LaTeX 01 - 基础</title>
+      <link>http://localhost:1313/hide/latex-01/</link>
+      <pubDate>Tue, 23 Jun 2020 14:12:34 +0800</pubDate>
+      
+      <guid>http://localhost:1313/hide/latex-01/</guid>
+      <description>&lt;p&gt;&lt;em&gt;记录&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git 01 - 基础</title>
+      <link>http://localhost:1313/hide/git/</link>
+      <pubDate>Tue, 23 Jun 2020 13:44:38 +0800</pubDate>
+      
+      <guid>http://localhost:1313/hide/git/</guid>
+      <description>&lt;p&gt;&lt;em&gt;记录&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

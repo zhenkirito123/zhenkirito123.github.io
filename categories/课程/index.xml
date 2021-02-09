@@ -13,19 +13,19 @@
     
     <item>
       <title>lea 命令</title>
-      <link>http://localhost:1313/post/lea/</link>
+      <link>http://localhost:1313/hide/lea/</link>
       <pubDate>Fri, 28 Aug 2020 10:22:01 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/lea/</guid>
+      <guid>http://localhost:1313/hide/lea/</guid>
       <description>&lt;p&gt;&lt;em&gt;一点思考&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>ICS Lec. 02-03</title>
-      <link>http://localhost:1313/post/ics-01/</link>
+      <link>http://localhost:1313/hide/ics-01/</link>
       <pubDate>Fri, 28 Aug 2020 10:21:46 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/ics-01/</guid>
+      <guid>http://localhost:1313/hide/ics-01/</guid>
       <description>&lt;p&gt;&lt;em&gt;Lecture 02-03 Bits, Bytes, and Integers&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     

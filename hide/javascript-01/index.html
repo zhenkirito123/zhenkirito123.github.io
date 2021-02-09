@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>JavaScript 01 - 基础 - zhen&#39;s website</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="zhenkirito" /><meta name="description" content="学了前端还是什么都不会的菜鸡
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/hide/javascript-01/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="JavaScript 01 - 基础" />
+<meta property="og:description" content="学了前端还是什么都不会的菜鸡" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/hide/javascript-01/" />
+<meta property="article:published_time" content="2020-08-28T10:21:30+08:00" />
+<meta property="article:modified_time" content="2020-08-28T10:21:30+08:00" />
+<meta itemprop="name" content="JavaScript 01 - 基础">
+<meta itemprop="description" content="学了前端还是什么都不会的菜鸡">
+<meta itemprop="datePublished" content="2020-08-28T10:21:30&#43;08:00" />
+<meta itemprop="dateModified" content="2020-08-28T10:21:30&#43;08:00" />
+<meta itemprop="wordCount" content="1029">
+
+
+
+<meta itemprop="keywords" content="JavaScript," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="JavaScript 01 - 基础"/>
+<meta name="twitter:description" content="学了前端还是什么都不会的菜鸡"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Kirito</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Kirito</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <p><em>学了前端还是什么都不会的菜鸡</em></p>
+
+<p>脚本必须位于 <code>&lt;script&gt;</code> 与 <code>&lt;/script&gt;</code> 标签之间,可被放置在 HTML 页面的 <code>&lt;body&gt;</code> 和 <code>&lt;head&gt;</code> 部分中。</p>
+
+<p>若使用外部 <code>.js</code> 文件，注意文件中不出现 <code>&lt;script&gt;</code> 标签，使用 <code>&lt;script src=&quot;myScript.js&quot;&gt;&lt;/script&gt;</code> 引用。</p>
+
+<h3 id="输出">输出</h3>
+
+<ul>
+<li>使用 <code>window.alert()</code> 弹出警告框。</li>
+
+<li><p>使用 <code>document.write()</code> 方法将内容写到 HTML 文档中。
+如果在文档已完成加载后执行 <code>document.write</code>，整个 HTML 页面将被覆盖。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;myFunction()&#34;</span><span class="p">&gt;</span>点我<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+function myFunction() {
+  document.write(Date());
+}</code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>使用 <code>innerHTML</code> 写入到 HTML 元素。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;demo&#34;</span><span class="p">&gt;</span>我的第一个段落<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;demo&#34;</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">&#34;段落已修改。&#34;</span><span class="p">;</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+
+<p><code>document.getElementById(&quot;demo&quot;)</code> 是使用 <code>id</code> 属性来查找 HTML 元素的 JavaScript 代码 。
+- 使用 <code>console.log()</code> 写入到浏览器的控制台。</p>
+
+<h3 id="字面量">字面量</h3>
+
+<p>常量
+- 数字
+- 字符串
+  用单引号和双引号皆可
+- 数组
+  如 <code>[40,100,20]</code>
+- 对象
+  如 <code>{firstName:&quot;John&quot;, lastName:&quot;Doe&quot;, age:50, eyeColor:&quot;blue&quot;}</code>
+- 函数
+  如 <code>function myFunction(a, b) { return a * b;}</code></p>
+
+<h3 id="变量">变量</h3>
+
+<p>用 <code>var</code> 定义。注意 Js 使用动态类型。
+重新声明 JavaScript 变量，该变量的值不会丢失。
+- 数字
+- 字符串
+  - 可以使用索引位置来访问字符串中的每个字符，如 <code>var character = carname[7];</code>
+  - 可以在字符串中添加转义字符 <code>\</code> 来使用引号等特殊字符。
+  - 使用 <code>.length</code> 获取长度。
+- 布尔
+- 数组</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript">  <span class="kd">var</span> <span class="nx">cars</span><span class="o">=</span><span class="k">new</span> <span class="nb">Array</span><span class="p">();</span>
+  <span class="nx">cars</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="s2">&#34;Saab&#34;</span><span class="p">;</span>
+  <span class="nx">cars</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&#34;Volvo&#34;</span><span class="p">;</span>
+  <span class="nx">cars</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="s2">&#34;BMW&#34;</span><span class="p">;</span>
+  <span class="c1">//或者
+</span><span class="c1"></span>  <span class="kd">var</span> <span class="nx">cars</span><span class="o">=</span><span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="s2">&#34;Saab&#34;</span><span class="p">,</span><span class="s2">&#34;Volvo&#34;</span><span class="p">,</span><span class="s2">&#34;BMW&#34;</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>用 <code>.length</code> 可以获得其元素个数。
+- 对象
+  属性 &amp; 方法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript">  <span class="kd">var</span> <span class="nx">person</span><span class="o">=</span>
+  <span class="p">{</span>
+    <span class="nx">firstname</span> <span class="o">:</span> <span class="s2">&#34;John&#34;</span><span class="p">,</span>
+    <span class="nx">lastname</span>  <span class="o">:</span> <span class="s2">&#34;Doe&#34;</span><span class="p">,</span>
+    <span class="nx">id</span>        <span class="o">:</span>  <span class="mi">5566</span>
+    <span class="nx">fullName</span> <span class="o">:</span> <span class="kd">function</span><span class="p">()</span> 
+	<span class="p">{</span>
+       <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">+</span> <span class="s2">&#34; &#34;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">lastName</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+
+  <span class="c1">//或者
+</span><span class="c1"></span>
+  <span class="kd">var</span> <span class="nx">person</span><span class="o">=</span><span class="k">new</span> <span class="nb">Object</span><span class="p">();</span>
+  <span class="nx">person</span><span class="p">.</span><span class="nx">name</span><span class="o">=</span><span class="s1">&#39;小明&#39;</span><span class="err">；</span>
+  <span class="nx">person</span><span class="p">.</span><span class="nx">sex</span><span class="o">=</span><span class="s1">&#39;男&#39;</span><span class="err">；</span>
+  <span class="nx">person</span><span class="p">.</span><span class="nx">method</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="nx">sex</span><span class="p">;</span>
+  <span class="p">}</span>  
+
+  <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">person</span><span class="p">.</span><span class="nx">lastname</span> <span class="o">+</span> <span class="s2">&#34;&lt;br&gt;&#34;</span><span class="p">);</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">person</span><span class="p">[</span><span class="s2">&#34;lastname&#34;</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&#34;&lt;br&gt;&#34;</span><span class="p">);</span>
+  <span class="nx">person</span><span class="p">.</span><span class="nx">fullName</span><span class="p">;</span><span class="c1">//输出函数表达式
+</span><span class="c1"></span>  <span class="nx">person</span><span class="p">.</span><span class="nx">fullName</span><span class="p">();</span><span class="c1">//输出结果
+</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><br />
+可以通过将变量的值设置为 null 来清空变量。
+当您声明新变量时，可以使用关键词 &ldquo;new&rdquo; 来声明其类型：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">carname</span><span class="o">=</span><span class="k">new</span> <span class="nb">String</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">x</span><span class="o">=</span>      <span class="k">new</span> <span class="nb">Number</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">y</span><span class="o">=</span>      <span class="k">new</span> <span class="nb">Boolean</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">cars</span><span class="o">=</span>   <span class="k">new</span> <span class="nb">Array</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">person</span><span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>如果把值赋给尚未声明的变量，该变量将被自动作为 window 的一个属性。</p>
+
+<h3 id="注释">注释</h3>
+
+<p>用 <code>//</code> 或者 <code>/*</code> <code>*/</code> 注释</p>
+
+<h3 id="函数">函数</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">functionname</span><span class="p">(</span><span class="nx">var1</span><span class="p">,</span><span class="nx">var2</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// 执行代码
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="事件">事件</h3>
+
+<p>如 <code>onclick</code> , <code>onmouseover</code> , <code>onmouseout</code> , <code>onkeydown</code> , <code>onload</code> 等。</p>
+
+<h3 id="运算">运算</h3>
+
+<p>如果把数字与字符串相加，结果将成为字符串。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">result1</span><span class="o">=</span><span class="mi">5</span><span class="o">+</span><span class="mi">5</span><span class="o">+</span><span class="s2">&#34;abc&#34;</span><span class="p">;</span> <span class="c1">//结果将是&#34;10abc&#34;
+</span><span class="c1"></span>
+<span class="kd">var</span> <span class="nx">result2</span><span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="o">+</span><span class="mi">5</span><span class="o">+</span><span class="mi">5</span><span class="o">+</span><span class="s2">&#34;abc&#34;</span><span class="p">;</span> <span class="c1">//结果将是&#34;55abc&#34;
+</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="比较">比较</h3>
+
+<p><code>===</code> / <code>!==</code> 为绝对相等，即数据类型与值都必须相等。
+<code>==</code> / <code>!=</code> 只比较转化成同一类型后的值。</p>
+
+<h3 id="循环">循环</h3>
+
+<p><code>for/in</code> 语句循环遍历对象的属性或者遍历数组：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">myFunction</span><span class="p">(){</span>
+	<span class="kd">var</span> <span class="nx">x</span><span class="p">;</span>
+	<span class="kd">var</span> <span class="nx">txt</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">;</span>
+	<span class="kd">var</span> <span class="nx">person</span><span class="o">=</span><span class="p">{</span><span class="nx">fname</span><span class="o">:</span><span class="s2">&#34;Bill&#34;</span><span class="p">,</span><span class="nx">lname</span><span class="o">:</span><span class="s2">&#34;Gates&#34;</span><span class="p">,</span><span class="nx">age</span><span class="o">:</span><span class="mi">56</span><span class="p">};</span> 
+	<span class="k">for</span> <span class="p">(</span><span class="nx">x</span> <span class="k">in</span> <span class="nx">person</span><span class="p">){</span>
+		<span class="nx">txt</span><span class="o">=</span><span class="nx">txt</span> <span class="o">+</span> <span class="nx">person</span><span class="p">[</span><span class="nx">x</span><span class="p">];</span>
+	<span class="p">}</span>
+	<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;demo&#34;</span><span class="p">).</span><span class="nx">innerHTML</span><span class="o">=</span><span class="nx">txt</span><span class="p">;</span>
+    <span class="c1">// 输出BillGates56
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>使用标签配合 <code>continue</code> , <code>break</code> 使用，可以跳出多重循环。
+注意 <code>break</code> 可用于跳出任何 JavaScript 代码块，而 <code>continue</code> 只能应用在循环语句中。</p>
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:zhenkirito@pku.edu.cn" class="iconfont icon-email" title="email"></a>
+      <a href="http://github.com/zhenkirito123" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2021
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">zhenkirito</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

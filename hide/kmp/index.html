@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>KMP - zhen&#39;s website</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="zhenkirito" /><meta name="description" content="好难
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/hide/kmp/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="KMP" />
+<meta property="og:description" content="好难" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/hide/kmp/" />
+<meta property="article:published_time" content="2020-08-28T10:22:08+08:00" />
+<meta property="article:modified_time" content="2020-08-28T10:22:08+08:00" />
+<meta itemprop="name" content="KMP">
+<meta itemprop="description" content="好难">
+<meta itemprop="datePublished" content="2020-08-28T10:22:08&#43;08:00" />
+<meta itemprop="dateModified" content="2020-08-28T10:22:08&#43;08:00" />
+<meta itemprop="wordCount" content="1298">
+
+
+
+<meta itemprop="keywords" content="字符串," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="KMP"/>
+<meta name="twitter:description" content="好难"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Kirito</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Kirito</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <p><em>好难</em></p>
+
+<p>KMP 算法用于在一个<strong>主文本字符串</strong> <code>S</code> 内寻找一个<strong>词</strong> <code>W</code> 的出现位置。</p>
+
+<p>如果文本串的长度为 $n$ ，模式串的长度为 $m$ ，那么匹配过程的时间复杂度为 $O(n)$ ，算上计算 <code>next</code> 的 $O(m)$ 时间，KMP 的整体时间复杂度为 $O(m + n)$ 。</p>
+
+<p>本文不再复述 KMP 算法的思想，仅对部分代码加以整理与阐述。</p>
+
+<p><strong>计算 <code>next</code> 数组</strong></p>
+
+<p><code>next</code> 数组有非优化与优化两个版本，前者的意义比较明确，即<strong>前缀的最长重复前后缀长度</strong>，而后者仅仅是为了加快求解速度所做的一种优化。在一些习题中我们会应用到非优化版本来帮助我们解题。</p>
+
+<p>下面附上代码：
+- 非优化版本
+<code>nxt[i]</code> 代表子串 <code>s[0 ~ i-1]</code> 的最长的重复前后缀长度。注意这个重复前后缀不包括子串本身。为了计算方便，我们把 <code>nxt[0]</code> 设为 $-1$ ，我们将在后文具体解释为什么这么做。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">calNext</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">,</span><span class="kt">int</span> <span class="n">nxt</span><span class="p">[]){</span>
+    <span class="kt">int</span> <span class="n">x</span><span class="o">=</span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">();</span>
+    <span class="kt">int</span> <span class="n">k</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+
+    <span class="cm">/*
+</span><span class="cm">     * 我们的主要思想是利用已经求出的nxt[0 ~ j-1]求出nxt[j]
+</span><span class="cm">     * 我们用k代表nxt[j-1]
+</span><span class="cm">     * 在循环的第一轮，我们只是简单的把nxt[1]设为0(这是显然的)
+</span><span class="cm">     * 而在之后的循环中，每当k通过k=nxt[k]指令被设为-1时，这都意味着重复的前后缀长度为0，即把相应nxt的值设为0
+</span><span class="cm">     */</span> 
+    <span class="n">nxt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">j</span><span class="o">&lt;</span><span class="n">x</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">k</span><span class="o">==-</span><span class="mi">1</span><span class="o">||</span><span class="n">s</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">==</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]){</span>
+            <span class="cm">/* 
+</span><span class="cm">             * 由k的意义，我们知道s[0 ~ k-1]和s[j-k ~ j-1]是一样的
+</span><span class="cm">             * 如果s[k]==s[j]，即s[0 ~ k]和s[j-k ~ j]是一样的,那么nxt[j]=k。注意这里k和j都已经加一了。
+</span><span class="cm">             * 而如果s[k]!=s[j]，这意味着我们需要重新找到一个长度使得前后缀相等，那么这个值最大可能是nxt[k]
+</span><span class="cm">             * 这是因为s[0 ~ k-1]和s[j-k ~ j-1]是一样的，我们的目标是相同的前后缀，那么前缀部分一定是s[0 ~ k-1]的前缀，后缀部分除s[k]外一定在s[j-k ~ j-1]中。这可以等同于在s[0 ~ k-1]中。
+</span><span class="cm">             * 那么我们对于s[0 ~ k-1]求出其最长的重复前后缀长度，然后判断s[k]与s[j]是否相同。
+</span><span class="cm">             */</span>
+            <span class="o">++</span><span class="n">k</span><span class="p">;</span>
+            <span class="o">++</span><span class="n">j</span><span class="p">;</span>
+            <span class="n">nxt</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">k</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="n">k</span><span class="o">=</span><span class="n">nxt</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<ul>
+<li><p>优化版本</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">calNext</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">,</span><span class="kt">int</span> <span class="n">nxt</span><span class="p">[]){</span>
+<span class="kt">int</span> <span class="n">x</span><span class="o">=</span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">();</span>
+<span class="kt">int</span> <span class="n">k</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+
+<span class="n">nxt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span>
+<span class="k">while</span><span class="p">(</span><span class="n">j</span><span class="o">&lt;</span><span class="n">x</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">k</span><span class="o">==-</span><span class="mi">1</span><span class="o">||</span><span class="n">s</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">==</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]){</span>
+        <span class="o">++</span><span class="n">k</span><span class="p">;</span>
+        <span class="o">++</span><span class="n">j</span><span class="p">;</span>
+
+        <span class="cm">/* 
+</span><span class="cm">         * 区别是这里做了一个判断
+</span><span class="cm">         * 在KMP算法的计算过程中，如果配串到s[j]的位置与主串不匹配了，我们将使得j=nxt[j]，这将使得原来主串与s[j]比较的字符变为与s[nxt[j]]比较。
+</span><span class="cm">         * 若s[j]==s[nxt[j]]，那么这样的比较一定是失败的。
+</span><span class="cm">         * 那么我们选择直接把nxt[j]设置为更小的nxt[k]。
+</span><span class="cm">         */</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">!=</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="n">nxt</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">k</span><span class="p">;</span>
+        <span class="k">else</span> <span class="n">nxt</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">nxt</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="n">k</span><span class="o">=</span><span class="n">nxt</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+
+<p><strong>应用 KMP 算法</strong></p>
+
+<p>直接附上代码。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="nf">KmpSearch</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">,</span><span class="n">string</span> <span class="n">t</span><span class="p">){</span>
+    <span class="c1">//s是主串，t是配串
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="n">sLen</span><span class="o">=</span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">(),</span><span class="n">tLne</span><span class="o">=</span><span class="n">t</span><span class="p">.</span><span class="n">length</span><span class="p">();</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="n">sLen</span><span class="o">&amp;&amp;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">tLen</span><span class="p">){</span>
+        <span class="cm">/* 
+</span><span class="cm">         * 这一过程与求解nxt数组的过程看上去有些相似，这是因为求解nxt数组的过程也可以看成是两个相同的字符串匹配的过程。
+</span><span class="cm">         * 我们一开始把i，j都置于字符串的开头，如果有s[i]==s[j]，则两个指针均后移一位。
+</span><span class="cm">         * 如果不匹配，则让j=nxt[j]，再继续比较。若一直不匹配，以至于j==-1，即j已经指向了开头，那么就放弃这一位的比较，把i也后移一位，重新开始比较。
+</span><span class="cm">         */</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">j</span><span class="o">==-</span><span class="mi">1</span><span class="o">||</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="p">]){</span>
+            <span class="o">++</span><span class="n">i</span><span class="p">;</span>
+            <span class="o">++</span><span class="n">j</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span><span class="p">{</span>
+            <span class="n">j</span><span class="o">=</span><span class="n">nxt</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+        <span class="p">}</span>
+
+        <span class="c1">//如果j==tLen，意味着整个t串都能在s串中找到，于是i-j即为起始位置
+</span><span class="c1"></span>        <span class="k">if</span><span class="p">(</span><span class="n">j</span><span class="o">==</span><span class="n">tLen</span><span class="p">)</span> <span class="k">return</span> <span class="n">i</span><span class="o">-</span><span class="n">j</span><span class="p">;</span>
+        <span class="k">else</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>相应的习题有很多，在这里就不列举了。</p>
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:zhenkirito@pku.edu.cn" class="iconfont icon-email" title="email"></a>
+      <a href="http://github.com/zhenkirito123" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2021
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">zhenkirito</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>投影映射 - zhen&#39;s website</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="zhenkirito" /><meta name="description" content="一些理解
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/hide/%E6%8A%95%E5%BD%B1%E6%98%A0%E5%B0%84/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="投影映射" />
+<meta property="og:description" content="一些理解" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/hide/%E6%8A%95%E5%BD%B1%E6%98%A0%E5%B0%84/" />
+<meta property="article:published_time" content="2020-08-28T10:22:30+08:00" />
+<meta property="article:modified_time" content="2020-08-28T10:22:30+08:00" />
+<meta itemprop="name" content="投影映射">
+<meta itemprop="description" content="一些理解">
+<meta itemprop="datePublished" content="2020-08-28T10:22:30&#43;08:00" />
+<meta itemprop="dateModified" content="2020-08-28T10:22:30&#43;08:00" />
+<meta itemprop="wordCount" content="312">
+
+
+
+<meta itemprop="keywords" content="高代," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="投影映射"/>
+<meta name="twitter:description" content="一些理解"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Kirito</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Kirito</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <p><em>一些理解</em></p>
+
+<p>已知最小多项式，以及相应的不变子空间，现在我们要求到各个不变子空间的投影映射。其原理可以参考下册教材的 P324 ，即我们要找到系数（多项式）$t<em>i$ 使得 $\sum</em>{i=1}^st<em>i \frac{m</em>{A}(x)}{p_i^{r_i}(x)}=1$ 。
+为了找到 $t_i$ ，我们有以下几种方法：</p>
+
+<ol>
+<li>辗转相除
+这是最本质的做法，但由于操作比较繁琐，一般只能应用于 $s=2$ 的场景。</li>
+<li>插值多项式
+由于 $p(A_i)\alpha_i=p(\lambda_i)\alpha_i$ ，故投影的性质可以描述为：
+$$
+\begin{aligned}
+    &amp;p_i(\lambda_i)=1,<br />
+    &amp;p_i(\lambda_j)=0
+\end{aligned}
+$$ 因此可以利用插值多项式。不过只有当 $\forall i,r_i=1$ 时，我们得到的 $t_i$ 才会是一个数，因此有必要引出下一个方法。</li>
+<li>插值多项式 + 凑
+似乎有一个性质是 $t<em>i \frac{m</em>{A}(x)}{p_i^{r_i}(x)}$ 的次数一定是 $n-1$ ，所以可以在插值多项式中用待定系数法解出一些系数。</li>
+<li>中国剩余定理
+$$
+\begin{aligned}
+    &amp;p_1(x) \equiv 1 (\text{mod} p_1^{r_1}(x)),<br />
+    &amp;p_1(x) \equiv 0 (\text{mod} p_2^{r_2}(x)),<br />
+    &amp;\qquad \qquad \vdots<br />
+    &amp;p_1(x) \equiv 0 (\text{mod} p_s^{r_s}(x))
+\end{aligned}
+$$实际上，只要对 $p_1^{r_1}(x)$ 和 $\frac{m(x)}{p_1^{r_1}(x)}$ 辗转相除即可。可以参考期中考的参考答案。</li>
+</ol>
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:zhenkirito@pku.edu.cn" class="iconfont icon-email" title="email"></a>
+      <a href="http://github.com/zhenkirito123" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2021
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">zhenkirito</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
